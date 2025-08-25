@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, Links } from "react-router-dom";
 
 function NavBar() {
   return (
@@ -6,7 +7,10 @@ function NavBar() {
       <div className="container d-flex justify-content-between align-items-center">
         {/* Logo Section */}
         <div className="navbar-logo">
-          <img src="/media/logo.svg" alt="Logo" style={{ width: "160px" }} />
+          <Link className="nav-link" to="/">
+            <img src="/media/logo.svg" alt="Logo" style={{ width: "160px" }} />
+          </Link>
+          
         </div>
 
         {/* Navigation Links */}
@@ -15,16 +19,16 @@ function NavBar() {
             <a className="nav-link text-muted">Signup</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-muted" href="#">About</a>
+            <Link className="nav-link text-muted" to="/about">About</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-muted" href="#">Products</a>
+            <Link className="nav-link text-muted" to="#">Products</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-muted" href="#">Pricing</a>
+            <Link className="nav-link text-muted" to="#">Pricing</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-muted" href="#">Support</a>
+            <Link className="nav-link text-muted" to="#">Support</Link>
           </li>
         </ul>
       </div>
